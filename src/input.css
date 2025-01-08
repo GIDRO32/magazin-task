@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('./fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy-Semibold';
+    src: url('./fonts/Gilroy-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('./fonts/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('./fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    src: url('./fonts/Gilroy-Heavy.woff') format('woff');
+    font-weight: 1000;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy-Black';
+    src: url('./fonts/Gilroy-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+/* Add padding to scrollbar track */
+.product-container::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 9999px;
+}
+
+.product-container::-webkit-scrollbar-thumb {
+    background-color: #5DB075; /* Green handlebar */
+    border-radius: 9999px;
+}
+
+.product-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Light gray track */
+    border-radius: 9999px;
+    margin-top: 20px; /* Adds space above and below the scrollbar */
+}
+.dot-wrapper {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.placeholder-dot {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
+    max-height: 40px;
+}
+.dot-wrapper.selected::after {
+    content: '';
+    position: absolute;
+    width: 1.75rem; /* Slightly larger than the dot */
+    height: 1.75rem; /* Slightly larger than the dot */
+    background: none;
+    border: 1px solid #5DB075; /* Green border */
+    border-radius: 50%;
+}
+/* Popups */
+.hidden {
+    display: none;
+}
+
+.auth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tab-content.hidden {
+    display: none;
+}
+/* Hidden state */
+.hidden {
+    display: none;
+}
+
+/* Show popup container */
+#popup-container.active {
+    display: flex;
+}
+
+.popup-content {
+    position: relative;
+    /* width: 100%; */
+    max-width: 400px;
+    padding: 20px;
+}
+
