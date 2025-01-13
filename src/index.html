@@ -28,7 +28,7 @@
                 </div>
             </div>
         </header>
-    </div>
+        </div>
     <div class="bg-white">
     <div class="max-w-[1280px] mx-auto">
         <div class="sub-header flex items-center justify-between py-3 border-none">
@@ -62,25 +62,27 @@
             </div>
                     
             <!-- Image Buttons -->
-            <div class="image-buttons flex items-center gap-2">
-                <button class="image-button flex items-center bg-white border-none p-2 hover:bg-gray-100">
-                    <img src="./images/icons/compare.webp" alt="Compare" class="w-7 h-7">
+            <div id="header-buttons" class="image-buttons flex items-center gap-2">
+                <button class="image-button flex items-center bg-white rounded-full border-none p-2 hover:bg-gray-100">
+                    <img src="./images/icons/compare.webp" alt="Compare" class="w-8 h-8">
                 </button>
-                <button class="image-button flex items-center bg-white border-none p-2 hover:bg-gray-100">
-                    <img src="./images/icons/wishlist.webp" alt="Favourites" class="w-7 h-7">
+                <button class="image-button flex items-center bg-white border-none rounded-full p-2 hover:bg-gray-100">
+                    <img src="./images/icons/wishlist.webp" alt="Favourites" class="w-8 h-8">
                 </button>
-                <button class="image-button flex items-center bg-white border-none p-2 hover:bg-gray-100">
-                    <img src="./images/icons/cart.webp" alt="Cart" class="w-7 h-7">
-                    <div class="text-left items-left cart-text font-gilroyRegular ml-3 text-sm text-gray-600">
-                        <p>У кошику</p>
-                        <p>немає товарів</p>
-                    </div>
+                <button class="image-button flex items-center bg-white  rounded-full border-none p-2 hover:bg-gray-100 relative">
+                    <img src="./images/icons/cart.webp" alt="Cart" class="w-8 h-8">
                 </button>
+                <div class="text-left cart-text font-gilroyRegular ml-1 text-sm text-gray-600">
+                    <p>У кошику</p>
+                    <p>немає товарів</p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- <div id="popup-container" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    
+    <div id="popup-container" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <!-- Popups -->
+         <!-- Popup 1 -->
         <div class="popup bg-white rounded shadow-lg p-6 max-w-sm w-full relative" data-popup="1">
             <div class="max-w-[320px] mx-auto">
                 <a href="#" class="popup-close absolute top-4 right-4 w-6 h-6">
@@ -99,22 +101,24 @@
             <!-- Form -->
             <form id="phone-login-form" class="space-y-4">
                 <input type="text" placeholder="Телефон" class="w-full font-gilroyRegular border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" />
-                <button type="button" class="popup-nav w-full bg-mint text-white py-2 rounded-sm hover:bg-green-600 font-gilroyMedium" data-target="2">Отримати смс с кодом</button>
+                <button type="button" class="popup-navigate w-full bg-mint text-white py-2 rounded-sm hover:bg-green-600 font-gilroyMedium" data-target="2">Отримати смс с кодом</button>
             </form>
             <div class="text-center mt-4">
                 <a href="#" class="text-mint font-gilroyMedium">Реєстрація</a>
             </div>
             <div class="text-center text-gray-500 mt-2 font-gilroyMedium">Або через соціальні мережі</div>
-            <!-- Social Buttons -->
+                <!-- Social Buttons -->
                 <div class="flex justify-between space-x-2 mt-4">
-                    <button class="bg-gray-200 rounded-sm py-3 px-[65px] hover:bg-gray-300">
+                    <button class="popup-authorize bg-gray-200 rounded-sm py-3 px-[65px] hover:bg-gray-300">
                         <img src="./images/icons/facebook.webp" alt="Facebook" class="h-6 w-6" />
                     </button>
-                    <button class="bg-gray-200 rounded-sm py-3 px-[65px] hover:bg-gray-300">
+                    <button class="popup-authorize bg-gray-200 rounded-sm py-3 px-[65px] hover:bg-gray-300">
                         <img src="./images/icons/google.webp" alt="Google" class="h-6 w-6" />
                     </button>
                 </div>
             </div>
+        </div>
+            <!-- Popup 2 -->
             <div class="popup bg-white rounded shadow-lg p-6 max-w-sm w-full hidden relative" data-popup="2">
                 <div class="max-w-[320px] mx-auto">
                     <a href="#" class="popup-close absolute top-4 right-4 w-6 h-6">
@@ -128,7 +132,7 @@
                         <div class="text-center text-black font-gilroyBold"> +38 093 123 45 67</div>
                     </div>
                     <div class="text-center my-3">
-                        <a href="#" class="popup-nav text-mint font-gilroyMedium underline-offset-4 underline decoration-dotted" data-next-popup="1">Помилились номером?</a>
+                        <a href="#" class="popup-navigate text-mint font-gilroyMedium underline-offset-4 underline decoration-dotted" data-target="1">Помилились номером?</a>
                     </div>
                     <!-- Form -->
                     <form id="phone-login-form" class="space-y-4">
@@ -138,14 +142,22 @@
                         <a href="#" class="text-black font-gilroyMedium">Не отримали код?</a>
                     </div>
                     <div class="text-center text-gray-500 mt-2 font-gilroyMedium">Відправити знову через 60с</div>
-                    <button type="button" class="popup-auth w-full bg-mint text-white py-3 rounded-md hover:bg-green-600 font-gilroyMedium mt-4">Вхід</button>
+                    <button type="button" class="popup-authorize w-full bg-mint text-white py-3 rounded-md hover:bg-green-600 font-gilroyMedium mt-4">Вхід</button>
                     <div class="text-center mt-4">
                         <a href="#" class="text-mint text-lg font-gilroyMedium">Реєстрація</a>
                     </div>
                 </div>
             </div>
-            <!-- Popup 2 -->
-            <div class="popup bg-white rounded-lg shadow-lg p-6 max-w-sm w-full hidden" data-popup="2">
+            <div class="popup bg-white rounded-lg shadow-lg p-6 max-w-sm w-full hidden" data-popup="10">
+                <div class="max-w-[320px] mx-auto">
+                    <h2 class="font-gilroyBold text-xl mb-4">Log Out</h2>
+                    <p class="text-gray-600 mb-6">Are you sure you want to log out?</p>
+                    <button id="logout-btn" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Yes, Log Out</button>
+                </div>
+            </div>    
+        </div>
+            <!-- Popup 3 -->
+            <div class="popup bg-white rounded-lg shadow-lg p-6 max-w-sm w-full hidden" data-popup="3">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-lg font-bold">Email</h2>
                     <button class="popup-close text-black text-xl font-bold">&times;</button>
@@ -160,7 +172,7 @@
                 </div>
             </div>
             <!-- Additional Popups -->
-            <div class="popup bg-white rounded-lg shadow-lg p-6 max-w-sm w-full hidden" data-popup="3">
+            <div class="popup bg-white rounded-lg shadow-lg p-6 max-w-sm w-full hidden" data-popup="4">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-lg font-bold">Реєстрація</h2>
                     <button class="popup-close text-black text-xl font-bold">&times;</button>
@@ -174,10 +186,9 @@
                     <button class="popup-navigate text-green-600" data-target="1">На Вхід</button>
                     <button class="popup-close text-gray-500">Закрити</button>
                 </div>
-            </div>
-        </div>
-    </div> -->
-        </div>
+            </div>        
+    </div>
+
         <div class="max-w-[1280px] mx-auto">
             <div class="slideshow relative h-[480px] mt-5 overflow-hidden bg-white flex items-center rounded-lg">
                 <!-- Slide Container -->
