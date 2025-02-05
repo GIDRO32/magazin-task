@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </button>
     
     <!-- Cart Button -->
-    <button id="cart-button" class="image-button flex items-center bg-white rounded-full border-none p-2 hover:bg-gray-100 relative">
+    <button id="cart-button-pc" class="image-button flex items-center bg-white rounded-full border-none p-2 hover:bg-gray-100 relative">
         <img src="./images/icons/cart.webp" alt="Cart" class="w-8 h-8">
         <div class="absolute -top-1 -right-1 bg-mint text-white text-xs font-gilroyRegular rounded-full w-5 h-5 flex items-center justify-center">2</div>
     </button>
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
             `;
-            document.getElementById('cart-button').addEventListener('click', () => {
+            document.getElementById('cart-button-pc').addEventListener('click', () => {
                 const shoppingCart = document.getElementById('shopping-cart'); // Get dynamically added dropdown
                 if (shoppingCart) shoppingCart.classList.toggle('hidden');
             });
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dropdownMenu && !dropdownMenu.contains(e.target) && !usernameBtn.contains(e.target)) {
             dropdownMenu.classList.add('hidden');
         }
-        const shoppingBtn = document.getElementById('cart-button');
+        const shoppingBtn = document.getElementById('cart-button-pc');
         if (shoppingCart && !shoppingCart.contains(e.target) && !shoppingBtn.contains(e.target)) {
             shoppingCart.classList.add('hidden');
         }

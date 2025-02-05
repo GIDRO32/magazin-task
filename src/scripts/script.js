@@ -24,6 +24,23 @@ dots.forEach((dot, index) => {
         updateSlides(currentSlide);
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+        navMenu.classList.toggle("flex");
+        navMenu.classList.toggle("flex-col");
+        navMenu.classList.toggle("absolute");
+        navMenu.classList.toggle("top-16");
+        navMenu.classList.toggle("left-0");
+        navMenu.classList.toggle("w-full");
+        navMenu.classList.toggle("bg-white");
+        navMenu.classList.toggle("shadow-md");
+        navMenu.classList.toggle("p-4");
+    });
+});
 
 rightButton.addEventListener('click', () => {
     currentSlide = (currentSlide + 1) % dots.length;
