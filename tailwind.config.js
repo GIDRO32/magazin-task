@@ -25,6 +25,9 @@ module.exports = {
         'mint': '#5DB075',
         'cucumber' : '#73B05D',
         'magenta' : '#FA1D6D'
+      },
+      screens:{
+        'phone':'320px'
       }
     },
   },

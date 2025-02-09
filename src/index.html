@@ -5,9 +5,9 @@
 
     </head>
     <body class = "bg-gray-100">
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto">
+        <div class="main-header xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto">
         <header class="xl:bg-gray-100 md:bg-white text-black flex justify-between items-center p-3 gap-5">
-            <button id="menu-toggle" class="lg:hidden flex items-center p-2">
+            <button id="hamburger-button" class="lg:hidden flex items-center p-2">
                 <img src="./images/icons/menu.webp" alt="Menu" class="w-8 h-8">
                 <img src="./images/logo.webp" alt="Favourites" class="w-27 h-7 ml-4">
             </button>
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <!-- Icon Buttons (Right Side) -->
-    <div id="header-mobile" class="flex items-center space-x-3">
+    <div id="header-mobile" class="flex items-center space-x-3 [@media(min-width: 320px)]max-w-[320px]">
         <!-- Search Button -->
 <!-- Search Button / Input Section -->
 <!-- Search Section -->
@@ -65,7 +65,7 @@
         </header>
         </div>
     <div class="bg-white">
-    <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto">
+    <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto">
         <div id="sub-header" class="sub-header-class flex items-center justify-between py-3 border-none">
             <!-- Catalog Button -->
             <button class="catalog-button font-gilroyMedium bg-mint text-white px-6 py-2 max-h-[38px] rounded-md text-[18px] flex items-center gap-1 hover:bg-green-700">
@@ -115,41 +115,99 @@
         </div>
     </div>
     <!-- Hamburger Menu Popup (Initially Hidden) -->
-<div id="mobile-menu" class="fixed inset-0 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+<!-- Hamburger Menu Popup -->
+<div id="hamburger-menu" class="fixed top-0 left-0 w-0 h-full bg-white shadow-lg transition-all duration-300 overflow-hidden z-50">
     <div class="flex items-center justify-between p-4 border-b">
-        <!-- Shop Logo -->
-        <a href="#" class="logo">
-            <img src="./images/logo.webp" alt="Logo" class="h-10">
-        </a>
+        <!-- Logo -->
+        <img src="./images/logo.webp" alt="Logo" class="h-10">
         <!-- Close Button -->
-        <button id="close-menu" class="p-2">
+        <button id="close-hamburger" class="p-2">
             <img src="./images/icons/x.webp" alt="Close" class="w-6 h-6">
         </button>
     </div>
 
     <!-- Navigation Links -->
-    <nav class="flex flex-col p-4 space-y-4">
-        <a href="#" class="flex items-center text-lg font-medium">
-            <img src="./images/icons/Marker.webp" alt="Home" class="w-6 h-6 mr-3"> Home
+    <nav class="flex flex-col mt-4 ml-4">
+        <a href="#" class="flex items-center p-2 hover:bg-green-700 text-mint text-md font-gilroySemibold">
+            <img src="./images/icons/grid(green).png" alt="Home" class="w-6 h-6 mr-3"> Каталог товароів
         </a>
-        <a href="#" class="flex items-center text-lg font-medium">
-            <img src="./images/icons/cart.webp" alt="Shop" class="w-6 h-6 mr-3"> Shop
+        <hr class="border-t my-2">
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/user.webp" alt="Shop" class="w-6 h-6 mr-3"> Гладчук Олексій
         </a>
-        <a href="#" class="flex items-center text-lg font-medium">
-            <img src="./images/icons/mail 2.webp" alt="Contact" class="w-6 h-6 mr-3"> Contact
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/cart.webp" alt="Categories" class="w-6 h-6 mr-3"> Кошик<span class="text-mint ml-1">2</span>
         </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/compare.webp" alt="Categories" class="w-6 h-6 mr-3"> Порівняння<span class="text-mint ml-1">12</span>
+        </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/wishlist.webp" alt="Categories" class="w-6 h-6 mr-3"> Список бажань<span class="text-mint ml-1">8</span>
+        </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/My orders.webp" alt="Categories" class="w-6 h-6 mr-3"> Замовлення
+        </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/Marker.webp" alt="Categories" class="w-6 h-6 mr-3"> Адреси
+        </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/messenger 2.webp" alt="Categories" class="w-6 h-6 mr-3"> Відгуки
+        </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/mail 2.webp" alt="Categories" class="w-6 h-6 mr-3"> Підписки
+        </a>
+        <a href="#" class="flex items-center p-2 hover:bg-gray-100 text-md font-gilroySemibold">
+            <img src="./images/icons/exit 1.webp" alt="Categories" class="w-6 h-6 mr-3"> Вийти
+        </a>
+
+        <hr class="border-t my-2">
+        <div class="flex justify-start gap-4 p-4">
+            <a href="#" class="text-gray-700 hover:underline">UA</a>
+            <a href="#" class="text-gray-700 hover:underline">EN</a>
+        </div>
+        <hr class="border-t my-2">
+        <div class="ml-4 text-gray-600">
+            <ul class="space-y-2 font-gilroyMedium xl:text-lg md:text-sm">
+                <li><a href="#" class="hover:text-green-500">Акції</a></li>
+                <li><a href="#" class="hover:text-green-500">Про компанію</a></li>
+                <li><a href="#" class="hover:text-green-500">Доставка та оплата</a></li>
+                <li><a href="#" class="hover:text-green-500">Блог</a></li>
+                <li><a href="#" class="hover:text-green-500">Контакти</a></li>
+            </ul>
+        </div>
+        <hr class="border-t my-2">
+        <!-- Contacts -->
+        <div class="ml-4">
+            <div class="py-2">
+                <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Інформаційна служба:</p>
+                <a href="0 800 800 00 08" class="hover:text-green-500 xl:text-2xl md:text-md font-gilroyBold text-black">0 800 800 00 08</a>
+            </div>
+            <div class="py-2">
+                <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Режим роботи:</p>
+                <a href="0 800 800 00 08" class="hover:text-green-500 text-md font-gilroyMedium text-black">Пн-Сб: 9:00-20:00</a>
+            </div>
+            <div class="py-2">
+                <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Адреса магазину:</p>
+                <a href="0 800 800 00 08" class="hover:text-green-500 text-md leading-tight font-gilroyMedium text-black">Київ, вул. Майдан Незалежності, 1</a>
+            </div>
+            <div class="py-2">
+                <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Соціальні мережі:</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:bg-gray-300 rounded-full" aria-label="Facebook">
+                    <img src="./images/icons/bx_bxl-facebook.webp" alt="Favourites" class="w-6 h-6">
+                </a>
+                <a href="#" class="hover:bg-gray-300 rounded-full" aria-label="Twitter">
+                    <img src="./images/icons/bx_bxl-twitter.webp" alt="Favourites" class="w-6 h-6">
+                </a>
+                <a href="#" class="hover:bg-gray-300 rounded-full" aria-label="Instagram">
+                    <img src="./images/icons/ant-design_instagram-filled.webp" alt="Favourites" class="w-6 h-6">
+                </a>
+            </div>
+            </div>
+        </div>
     </nav>
-
-    <!-- Divider Line -->
-    <hr class="border-t my-4">
-
-    <!-- Language Links -->
-    <div class="flex justify-start space-x-4 p-4">
-        <a href="#" class="text-gray-600 hover:text-black">EN</a>
-        <a href="#" class="text-gray-600 hover:text-black">UA</a>
-        <a href="#" class="text-gray-600 hover:text-black">RU</a>
-    </div>
 </div>
+
 
     <div id="popup-container" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <!-- Popups -->
@@ -260,7 +318,7 @@
             </div>        
     </div>
 
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] xl:mx-auto md:mx-auto">
+        <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] xl:mx-auto md:mx-auto">
             <div class="slideshow relative xl:h-[480px] md:h-[288px] mt-5 overflow-hidden bg-white flex items-center rounded-lg">
                 <!-- Slide Container -->
                 <div class="slides flex w-full transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
@@ -297,7 +355,7 @@
                 <img src="./images/arrow.webp" alt="Slide 3 Image" class="slide-image w-[30px] h-auto rotate-180">
             </button>
         </div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto">
+        <div class="xl:max-w-[1280px] md:max-w-[768px] phone:max-w-[320px] mx-auto">
             <div class="advertisements bg-white rounded-md px-8 py-10 my-6 flex justify-between">
                     <!-- Advertisement Block 1 -->
                     <div class="ad-block text-left xl:w-[320px] md:w-[176px]">
@@ -327,8 +385,8 @@
                     </div>
             </div>
         </div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Хіти продажу</p></div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto mt-8">
+        <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Хіти продажу</p></div>
+        <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-8">
             <div class="product-container flex gap-4 overflow-x-auto pb-6">
                 <!-- Product Card -->
                 <div class="product-card w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
@@ -729,7 +787,7 @@
             </div>
         </div>
                     <!-- Section Header -->
-                     <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto mt-8">
+                     <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-8">
                         <div class="flex items-center mb-6">
                             <p class="text-3xl font-gilroyBold text-black">Популярні Категорії</p>
                             <a href="#" class="text-mint text-md font-gilroyMedium ml-5 flex items-center hover:underline">
@@ -738,9 +796,9 @@
                             </a>
                         </div>
                      </div>
-        <div class="popular-categories xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto my-10">            
+        <div class="popular-categories xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto my-10">            
             <!-- Category Items -->
-            <div class="grid xl:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-7">
+            <div class="grid xl:grid-cols-6 md:grid-cols-3 phone:grid-cols-2 gap-7">
                 <!-- Category 1 -->
                 <div class="category-item flex flex-col items-center">
                     <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
@@ -785,8 +843,8 @@
                 </div>
             </div>
         </div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Новинки</p></div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto mt-8">
+        <div class="xl:max-w-[1280px] md:max-w-[768px] phone:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Новинки</p></div>
+        <div class="xl:max-w-[1280px] md:max-w-[768px] phone:max-w-[320px] mx-auto mt-8">
             <div class="product-container flex gap-4 overflow-x-auto pb-6">
                 <!-- Product Card -->
                 <div class="product-card w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
@@ -1182,7 +1240,7 @@
             </div>
         </div>
                             <!-- Blog Header -->
-                            <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto mt-16">
+                            <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-16">
                                 <div class="flex items-center mb-6">
                                     <p class="text-3xl font-gilroyBold text-black">Блог</p>
                                     <a href="#" class="text-mint text-md font-gilroyMedium ml-5 flex items-center hover:underline">
@@ -1191,7 +1249,7 @@
                                     </a>
                                 </div>
                              </div>
-                             <section class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto py-4">                            
+                             <section class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto py-4">                            
                                 <!-- Blog Panels -->
                                 <div class="product-container flex space-x-6 overflow-x-auto scrollbar-hidden pb-6">
                                     <div class="blog-panel bg-white rounded-md w-[300px] shrink-0 overflow-hidden flex flex-col justify-between">
@@ -1300,16 +1358,16 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="subscribe-section py-10 px-6">
-                                <div class="xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] md:h-[198px] mx-auto flex bg-white rounded-md flex-row items-center gap-10">
+                            <section class="subscribe-section py-10 px-6 overflow-hidden">
+                                <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] md:h-[198px] mx-auto flex bg-white rounded-md flex-row items-center gap-10">
                                     <!-- Left Content -->
-                                    <div class="subscribe-content ml-[80px] w-full lg:w-1/2 text-center lg:text-left">
-                                        <h2 class="xl:text-3xl md:lg font-gilroyBold text-black mb-8">
+                                    <div class="subscribe-content ml-[80px] w-full lg:w-1/2 text-left">
+                                        <h2 class="xl:text-3xl md:text-xl font-gilroyBold text-black mb-8">
                                             Новини, знижки та крутецькі пропозиції
                                         </h2>
                                         <form class="flex flex-row items-center justify-center">
                                             <input type="email" placeholder="Ваш email" class="xl:w-[300px] md:w-[213px] py-3 px-3 rounded-l-lg border border-gray-300 text-black font-gilroyMedium focus:ring-2 focus:ring-green-500 focus:outline-none" required>
-                                            <button type="submit" class="bg-mint hover:bg-green-600 xl:w-[180px] md:w-[127px] text-white items-center px-8 py-3 rounded-r-lg font-gilroySemibold text-[18px]">
+                                            <button type="submit" class="bg-mint hover:bg-green-600 xl:w-[180px] md:w-[127px] text-white px-8 py-3 rounded-r-lg font-gilroySemibold text-[18px] text-center">
                                                 Підписатись
                                             </button>
                                         </form>
@@ -1317,13 +1375,14 @@
                             
                                     <!-- Right Image -->
                                     <div class="subscribe-image w-full lg:w-1/2 relative">
-                                        <div class="xl:overflow-hidden aspect-w-1 aspect-h-1">
-                                            <img src="./images/photos/klipartz 1.webp" alt="Subscribe Image" class="object-cover w-[90%] h-auto">
+                                        <div class="aspect-w-1 aspect-h-1">
+                                            <img src="./images/photos/klipartz 1(full).webp" alt="Subscribe Image" class="xl:hidden w-[90%] h-auto">
+                                            <img src="./images/photos/klipartz 1.webp" alt="Subscribe Image" class="md:hidden xl:flex w-[70%] h-auto">
                                         </div>
                                     </div>
                                 </div>
                             </section>
-                            <footer class="bg-white text-black py-10 xl:max-w-[1280px] md:max-w-[768px] sm:max-w-[320px] mx-auto">
+                            <footer class="bg-white text-black py-10 xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto">
                                 <div class="grid grid-cols-4 gap-8 px-6">
                                     <!-- Logo and Copyright -->
                                     <div>

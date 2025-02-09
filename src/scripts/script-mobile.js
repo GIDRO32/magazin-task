@@ -1,16 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const closeMenu = document.getElementById("close-menu");
-
-    menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.add("show");
-    });
-
-    closeMenu.addEventListener("click", function () {
-        mobileMenu.classList.remove("show");
-    });
+document.getElementById("hamburger-button").addEventListener("click", function () {
+    document.getElementById("hamburger-menu").classList.add("open");
 });
+
+document.getElementById("close-hamburger").addEventListener("click", function () {
+    document.getElementById("hamburger-menu").classList.remove("open");
+});
+
+// Close when clicking outside
+document.addEventListener("click", function (event) {
+    let menu = document.getElementById("hamburger-menu");
+    let button = document.getElementById("hamburger-button");
+
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.remove("open");
+    }
+});
+
 document.getElementById("search-button").addEventListener("click", function (event) {
     event.stopPropagation(); // Prevents closing immediately when clicked
 
