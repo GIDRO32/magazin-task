@@ -27,7 +27,8 @@ module.exports = {
         'magenta' : '#FA1D6D'
       },
       screens:{
-        'phone':'320px'
+        'md':'768px',
+        'xs':'320px',
       }
     },
   },

@@ -16,20 +16,27 @@ document.addEventListener("click", function (event) {
     }
 });
 
-document.getElementById("search-button").addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevents closing immediately when clicked
+document.addEventListener("DOMContentLoaded", function() {
+    const searchPopup = document.getElementById("searchPopup");
+    const openSearch = document.getElementById("search-button");
+    const closeSearch = document.getElementById("closeSearch");
 
-    let searchContainer = document.getElementById("search-container");
-    let searchInput = document.getElementById("search-input");
+    // Open popup
+    openSearch.addEventListener("click", function() {
+        searchPopup.classList.remove("hidden");
+    });
 
-    if (searchContainer.classList.contains("expanded")) {
-        searchContainer.classList.remove("expanded");
-        searchInput.blur(); // Remove focus
-    } else {
-        searchContainer.classList.add("expanded");
-        searchInput.classList.remove("hidden");
-        searchInput.focus();
-    }
+    // Close popup
+    closeSearch.addEventListener("click", function() {
+        searchPopup.classList.add("hidden");
+    });
+
+    // Close popup when clicking outside of it
+    searchPopup.addEventListener("click", function(event) {
+        if (event.target === searchPopup) {
+            searchPopup.classList.add("hidden");
+        }
+    });
 });
 
 // Close input when clicking outside
@@ -41,3 +48,12 @@ document.addEventListener("click", function (event) {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".nav-section h4");
+
+    dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function () {
+            this.parentElement.classList.toggle("active");
+        });
+    });
+});

@@ -6,10 +6,10 @@
     </head>
     <body class = "bg-gray-100">
         <div class="main-header xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto">
-        <header class="xl:bg-gray-100 md:bg-white text-black flex justify-between items-center p-3 gap-5">
+        <header class="xl:bg-gray-100 md:bg-white xs:bg-white text-black flex justify-between items-center p-3 gap-5">
             <button id="hamburger-button" class="lg:hidden flex items-center p-2">
                 <img src="./images/icons/menu.webp" alt="Menu" class="w-8 h-8">
-                <img src="./images/logo.webp" alt="Favourites" class="w-27 h-7 ml-4">
+                <img src="./images/logo.webp" alt="Favourites" class="shop-logo-mobile xl:w-27 md:w-18 xs:w-9 h-auto ml-4">
             </button>
             <img src="./images/logo.webp" alt="Favourites" class="shop-logo w-27 h-7">
             <nav id="nav-menu" class="ml-7 flex gap-7 mr-auto font-gilroyRegular">
@@ -30,20 +30,17 @@
                 </div>
             </div>
             <!-- Icon Buttons (Right Side) -->
-    <div id="header-mobile" class="flex items-center space-x-3 [@media(min-width: 320px)]max-w-[320px]">
+    <div id="header-mobile" class="flex items-centerspace-x-3 xs:max-w-[320px]">
         <!-- Search Button -->
-<!-- Search Button / Input Section -->
-<!-- Search Section -->
-<div id="search-container" class="flex items-center relative transition-all duration-300">
-    <!-- Search Input (Hidden by Default) -->
-    <input id="search-input" type="text" placeholder="Пошук..." 
-        class="hidden w-0 opacity-0 transition-all duration-300 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:border-gray-500">
-    
-    <!-- Search Button -->
-    <button id="search-button" class="p-2">
-        <img src="./images/icons/search.webp" alt="Search" class="w-7 h-7">
-    </button>
-</div>
+        <!-- Search Button / Input Section -->
+        <!-- Search Section -->
+        <div id="search-container" class="flex items-center relative transition-all duration-300">
+            <!-- Search Input (Hidden by Default) -->
+            <!-- Search Button -->
+            <button id="search-button" class="p-2">
+                <img src="./images/icons/search.webp" alt="Search" class="w-7 h-7">
+            </button>
+        </div>
 
         <!-- User Button -->
         <button id="user-button" class="p-2">
@@ -63,9 +60,19 @@
         </button>
     </div>
         </header>
+        <div id="searchPopup" class="xl:hidden md:bg-white xs:bg-white">
+            <div class="bg-white w-[90%] md:max-w-[500px] xs:max-w-[320px] mx-auto shadow-lg relative">
+                <!-- Close Button -->
+                <button id="closeSearch" class="absolute top-2 right-2 text-black hover:text-red-500 text-xl">&times;</button>
+                
+                <!-- Search Input -->
+                <input type="text" placeholder="Пошук..." 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+            </div>
+        </div>
         </div>
     <div class="bg-white">
-    <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto">
+    <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto">
         <div id="sub-header" class="sub-header-class flex items-center justify-between py-3 border-none">
             <!-- Catalog Button -->
             <button class="catalog-button font-gilroyMedium bg-mint text-white px-6 py-2 max-h-[38px] rounded-md text-[18px] flex items-center gap-1 hover:bg-green-700">
@@ -116,10 +123,10 @@
     </div>
     <!-- Hamburger Menu Popup (Initially Hidden) -->
 <!-- Hamburger Menu Popup -->
-<div id="hamburger-menu" class="fixed top-0 left-0 w-0 h-full bg-white shadow-lg transition-all duration-300 overflow-hidden z-50">
+<div id="hamburger-menu" class="fixed top-0 left-0 w-0 h-full bg-white shadow-lg transition-all duration-300 overflow-scroll z-50">
     <div class="flex items-center justify-between p-4 border-b">
         <!-- Logo -->
-        <img src="./images/logo.webp" alt="Logo" class="h-10">
+        <img src="./images/logo.webp" alt="Logo" class="shop-logo-mobile h-10">
         <!-- Close Button -->
         <button id="close-hamburger" class="p-2">
             <img src="./images/icons/x.webp" alt="Close" class="w-6 h-6">
@@ -318,45 +325,73 @@
             </div>        
     </div>
 
-        <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] xl:mx-auto md:mx-auto">
-            <div class="slideshow relative xl:h-[480px] md:h-[288px] mt-5 overflow-hidden bg-white flex items-center rounded-lg">
-                <!-- Slide Container -->
-                <div class="slides flex w-full transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
-                    <!-- Slide 1 -->
-                    <div class="slide flex-shrink-0 w-full flex items-center justify-between">
-                        <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl ml-24">Хай будуть знижки</h2>
-                        <img src="./images/photos/Banner.webp" alt="Slide 1 Image" class="slide-image xl:w-[580px] md:w-[348px] h-auto object-cover mr-12">
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide flex-shrink-0 w-full flex items-center justify-between">
-                        <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl ml-24">Придбайте з вигодою</h2>
-                        <img src="./images/photos/Banner2.webp" alt="Slide 2 Image" class="slide-image xl:w-[580px] md:w-[348px] h-auto object-cover mr-12">
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide flex-shrink-0 w-full flex items-center justify-between">
-                        <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl ml-24">Безкоштовна доставка</h2>
-                        <img src="./images/photos/Banner3.webp" alt="Slide 3 Image" class="slide-image xl:w-[580px] md:w-[348px] h-auto object-cover mr-12">
-                    </div>
-                </div>
-        
-                <!-- Pagination -->
-                <div class="pagination absolute bottom-4 left-1/2 font-gilroyRegular transform -translate-x-1/2 flex space-x-2">
-                    <span class="dot w-3 h-3 rounded-full bg-gray-400 active:bg-mint"></span>
-                    <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
-                    <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
-                </div>
+<!-- Slideshow Container -->
+<div class="relative xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] xl:mx-auto md:mx-auto xs:mx-auto">
+    <div class="slideshow relative xl:h-[480px] md:h-[288px] xs:h-[248px] mt-5 overflow-hidden bg-white flex items-center xl:rounded-lg xs:rounded-none">
+        <!-- Slide Container -->
+        <div class="slides xs:hidden md:flex w-full transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+            <!-- Slide 1 -->
+            <div class="slide flex-shrink-0 w-full flex items-center justify-between">
+                <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl ml-24">Хай будуть знижки</h2>
+                <img src="./images/photos/Banner.webp" alt="Slide 1 Image" class="slide-image xl:w-[580px] md:w-[348px] xs:w-[174px] h-auto object-cover mr-12">
             </div>
-        
-            <!-- Navigation Buttons -->
-            <button class="nav-button ml-[14.5%] bottom-[50%] left-button absolute font-gilroyRegular bg-gray-200 rounded-sm px-1.5 py-8 left-4 transform text-gray-600 text-2xl hover:text-gray-800">
-                <img src="./images/arrow.webp" alt="Slide 3 Image" class="slide-image w-[30px] h-auto">
-            </button>
-            <button class="nav-button mr-[14.5%] bottom-[50%] right-button absolute font-gilroyRegular bg-gray-200 rounded-sm px-1.5 py-8 right-4 transform text-gray-600 text-2xl hover:text-gray-800">
-                <img src="./images/arrow.webp" alt="Slide 3 Image" class="slide-image w-[30px] h-auto rotate-180">
-            </button>
+            <!-- Slide 2 -->
+            <div class="slide flex-shrink-0 w-full flex items-center justify-between">
+                <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl ml-24">Придбайте з вигодою</h2>
+                <img src="./images/photos/Banner2.webp" alt="Slide 2 Image" class="slide-image xl:w-[580px] md:w-[348px] xs:w-[174px] h-auto object-cover mr-12">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide flex-shrink-0 w-full flex items-center justify-between">
+                <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl ml-24">Безкоштовна доставка</h2>
+                <img src="./images/photos/Banner3.webp" alt="Slide 3 Image" class="slide-image xl:w-[580px] md:w-[348px] xs:w-[174px] h-auto object-cover mr-12">
+            </div>
         </div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] phone:max-w-[320px] mx-auto">
-            <div class="advertisements bg-white rounded-md px-8 py-10 my-6 flex justify-between">
+        <div class="slides-mobile md:hidden xs:flex w-full transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+            <!-- Slide 1 -->
+            <div class="slide flex-shrink-0 w-full flex items-center justify-between xs:flex-col xs:justify-center xs:text-center">
+                <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl xs:text-xl xs:mb-4">
+                    Хай будуть знижки
+                </h2>
+                <img src="./images/photos/Banner.webp" alt="Slide 1 Image" 
+                     class="slide-image xl:w-[580px] md:w-[348px] xs:w-[200px] h-auto object-cover">
+            </div>
+            <div class="slide flex-shrink-0 w-full flex items-center justify-between xs:flex-col xs:justify-center xs:text-center">
+                <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl xs:text-xl xs:mb-4">
+                    Хай будуть знижки
+                </h2>
+                <img src="./images/photos/Banner2.webp" alt="Slide 1 Image" 
+                     class="slide-image xl:w-[580px] md:w-[348px] xs:w-[200px] h-auto object-cover">
+            </div>
+            <div class="slide flex-shrink-0 w-full flex items-center justify-between xs:flex-col xs:justify-center xs:text-center">
+                <h2 class="slide-title font-gilroyBold text-black xl:text-6xl md:text-3xl xs:text-xl xs:mb-4">
+                    Хай будуть знижки
+                </h2>
+                <img src="./images/photos/Banner3.webp" alt="Slide 1 Image" 
+                     class="slide-image xl:w-[580px] md:w-[348px] xs:w-[200px] h-auto object-cover">
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination absolute bottom-4 left-1/2 font-gilroyRegular transform -translate-x-1/2 flex space-x-2">
+            <span class="dot w-3 h-3 rounded-full bg-gray-400 active:bg-mint"></span>
+            <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
+            <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <!-- Left Button -->
+    <button class="nav-button-left absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-sm px-1.5 py-8 text-gray-600 text-2xl hover:text-gray-800">
+        <img src="./images/arrow.webp" alt="Previous Slide" class="w-[30px] h-auto">
+    </button>
+
+    <!-- Right Button -->
+    <button class="nav-button-right absolute right-[-20px] top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-sm px-1.5 py-8 text-gray-600 text-2xl hover:text-gray-800">
+        <img src="./images/arrow.webp" alt="Next Slide" class="w-[30px] h-auto rotate-180">
+    </button>
+</div>
+
+        <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto">
+            <div class="advertisements bg-white rounded-md px-8 py-10 my-6 flex justify-between xl:grid-cols-3 md:grid-cols-3 xs:grid xs:grid-cols-1 xs:gap-2">
                     <!-- Advertisement Block 1 -->
                     <div class="ad-block text-left xl:w-[320px] md:w-[176px]">
                         <h3 class="ad-title font-gilroyBold text-xl text-black mb-2">Все в наявності<span class="text-white">placeholder</span></h3>
@@ -385,21 +420,21 @@
                     </div>
             </div>
         </div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Хіти продажу</p></div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-8">
+        <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl"><div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Хіти продажу</p></div>
+        <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-8">
             <div class="product-container flex gap-4 overflow-x-auto pb-6">
                 <!-- Product Card -->
                 <div class="product-card w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
                     <div class="inner-content w-[260px] mx-auto">
                         <!-- Promo Stickers -->
                         <div class="promo-stickers flex gap-1 mb-3">
-                            <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">-15%</span>
-                            <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                            <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">-15%</span>
+                            <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                         </div>
             
                         <!-- Product Image -->
                         <div class="product-image mb-3 flex items-center justify-center">
-                            <img src="./images/photos/Product photo1.webp" alt="Product 1" class="w-[260px] h-[260px] object-contain">
+                            <img src="./images/photos/Product photo1.webp" alt="Product 1" class="product-image w-[260px] h-[260px] object-contain">
                         </div>
             
                         <div class="color-dots flex gap-2 mb-2">
@@ -439,19 +474,20 @@
                         </div>
             
                         <!-- Prices -->
-                        <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                        <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                             <span class="discount-price text-sm text-gray-500 line-through mr-2">45 499 грн</span>
                         </div>
-                        <div class="prices flex items-center justify-start mb-3">
+                        <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
                             <span class="actual-price text-2xl font-gilroyBold text-red-600">40 499 грн</span>
-                            <span class="text-mint text-xs ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
+                            <span class="discount-comment text-mint text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         </div>
-            
+                        <span class="discount-comment xs:flex md:hidden text-mint text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         <!-- Buy Button and Actions -->
                         <div class="actions flex justify-between">
                             <div class ="buy-button-place">
                                 <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                                Купити
+                                    <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                    <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                                 </button>
                             </div>
                             <div class ="small-button-place">
@@ -469,7 +505,7 @@
                     <div class="inner-content w-[260px] mx-auto">
                         <!-- Promo Stickers -->
                         <div class="promo-stickers flex gap-1 mb-3">
-                            <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                            <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                         </div>
             
                         <!-- Product Image -->
@@ -496,18 +532,21 @@
                         </div>
             
                         <!-- Prices -->
-                        <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                        <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                             <span class="discount-price text-sm text-white line-through mr-2">45 499 грн</span>
                         </div>
-                        <div class="prices flex items-center justify-start mb-3">
-                            <span class="actual-price text-2xl font-gilroyBold text-black">1 299 грн</span>
+                        <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
+                            <span class="actual-price text-2xl font-gilroyBold text-red-600">40 499 грн</span>
+                            <span class="discount-comment text-mint text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         </div>
+                        <span class="discount-comment xs:flex md:hidden text-mint text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
             
                         <!-- Buy Button and Actions -->
                         <div class="actions flex justify-between">
                             <div class ="buy-button-place">
                                 <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                                Купити
+                                    <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                    <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                                 </button>
                             </div>
                             <div class ="small-button-place">
@@ -525,7 +564,7 @@
                     <div class="inner-content w-[260px] mx-auto">
                     <!-- Promo Stickers -->
                     <div class="promo-stickers flex gap-1 mb-3">
-                        <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                        <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                     </div>
         
                     <!-- Product Image -->
@@ -552,18 +591,20 @@
                     </div>
         
                     <!-- Prices -->
-                    <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                    <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                         <span class="discount-price text-sm text-white line-through mr-2">45 499 грн</span>
                     </div>
-                    <div class="prices flex items-center justify-start mb-3">
+                    <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
                         <span class="actual-price text-2xl font-gilroyBold text-black">12 499 грн</span>
+                        <span class="discount-comment text-white text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     </div>
-        
+                    <span class="discount-comment xs:flex md:hidden text-white text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     <!-- Buy Button and Actions -->
                     <div class="actions flex justify-between">
                         <div class ="buy-button-place">
                             <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                            Купити
+                                <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                             </button>
                         </div>
                         <div class ="small-button-place">
@@ -581,8 +622,8 @@
                     <div class="inner-content w-[260px] mx-auto">
                         <!-- Promo Stickers -->
                         <div class="promo-stickers flex gap-1 mb-3">
-                            <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">-10%</span>
-                            <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                            <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">-10%</span>
+                            <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                         </div>
             
                         <!-- Product Image -->
@@ -609,19 +650,20 @@
                         </div>
             
                         <!-- Prices -->
-                        <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                        <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                             <span class="discount-price text-sm text-gray-500 line-through mr-2">25 699 грн</span>
                         </div>
                         <div class="prices flex items-center justify-start mb-3">
                             <span class="actual-price text-2xl font-gilroyBold text-red-600">24 699 грн</span>
-                            <span class="text-mint text-xs ml-3 mt-3 font-gilroySemibold">Знижка 1 000 грн</span>
+                            <span class="discount-comment text-mint text-xs ml-3 mt-3 md:flex xs:hidden font-gilroySemibold">Знижка 1 000 грн</span>
                         </div>
-            
+                        <span class="discount-comment text-mint text-xs ml-3 mt-3 xs:flex md:hidden font-gilroySemibold">Знижка 1 000 грн</span>
                         <!-- Buy Button and Actions -->
                         <div class="actions flex justify-between">
                             <div class ="buy-button-place">
                                 <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                                Купити
+                                    <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                    <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                                 </button>
                             </div>
                             <div class ="small-button-place">
@@ -636,10 +678,11 @@
                     </div>
                 </div>
                 <div class="product-card max-w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
+                    <div class="inner-content w-[260px] mx-auto">
                     <!-- Promo Stickers -->
                     <div class="promo-stickers flex gap-1 mb-3">
-                        <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">-10%</span>
-                        <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                        <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">-10%</span>
+                        <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                     </div>
         
                     <!-- Product Image -->
@@ -684,19 +727,20 @@
                     </div>
         
                     <!-- Prices -->
-                    <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                    <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                         <span class="discount-price text-sm text-gray-500 line-through mr-2">45 499 грн</span>
                     </div>
                     <div class="prices flex items-center justify-start mb-3">
                         <span class="actual-price text-2xl font-gilroyBold text-red-600">40 499 грн</span>
-                        <span class="text-mint text-xs ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
+                        <span class="discount-comment text-mint text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     </div>
-        
+                    <span class="discount-comment text-mint text-xs md:hidden xs:flex ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     <!-- Buy Button and Actions -->
                     <div class="actions flex justify-between">
                         <div class ="buy-button-place">
                             <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                            Купити
+                                <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                             </button>
                         </div>
                         <div class ="small-button-place">
@@ -709,11 +753,13 @@
                         </div>
                     </div>
                 </div>
+                </div>
                 <div class="product-card max-w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
                     <!-- Promo Stickers -->
+                    <div class="inner-content w-[260px] mx-auto">
                     <div class="promo-stickers flex gap-1 mb-3">
-                        <span class="sticker bg-red-600 text-white text-sm font-gilroySemibold px-2 py-1/2 rounded-2xl">-15%</span>
-                        <span class="sticker bg-orange-400 text-white text-sm font-gilroySemibold px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                        <span class="sticker bg-red-600 text-white text-sm font-gilroySemibold xl:px-2 xs:p-1 py-1/2 rounded-2xl">-15%</span>
+                        <span class="sticker bg-orange-400 text-white text-sm font-gilroySemibold xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                     </div>
         
                     <!-- Product Image -->
@@ -758,19 +804,20 @@
                     </div>
         
                     <!-- Prices -->
-                    <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                    <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                         <span class="discount-price text-sm text-gray-500 line-through mr-2">45 499 грн</span>
                     </div>
                     <div class="prices flex items-center justify-start mb-3">
                         <span class="actual-price text-2xl font-gilroyBold text-red-600">40 499 грн</span>
-                        <span class="text-mint text-xs ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
+                        <span class="discount-comment text-mint text-xs ml-3 mt-3 md:flex xs:hidden font-gilroySemibold">Знижка 4 000 грн</span>
                     </div>
-        
+                    <span class="discount-comment text-mint text-xs xl:hidden md:flex ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     <!-- Buy Button and Actions -->
                     <div class="actions flex justify-between">
                         <div class ="buy-button-place">
                             <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                            Купити
+                                <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                             </button>
                         </div>
                         <div class ="small-button-place">
@@ -784,76 +831,80 @@
                     </div>
                 </div>
                 </div>
+                </div>
             </div>
-        </div>
-                    <!-- Section Header -->
-                     <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-8">
-                        <div class="flex items-center mb-6">
+        </div>                    <!-- Section Header -->
+                     <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-8">
+                        <div class="flex items-center xl:mb-6 xs:mb-3">
                             <p class="text-3xl font-gilroyBold text-black">Популярні Категорії</p>
-                            <a href="#" class="text-mint text-md font-gilroyMedium ml-5 flex items-center hover:underline">
+                            <a href="#" class="text-mint xl:flex xs:hidden text-md font-gilroyMedium ml-5 flex items-center hover:underline">
                                 Дивитися всі
                                 <span class="ml-1 text-lg">➔</span>
                             </a>
                         </div>
+                        <a href="#" class="text-mint xl:hidden xs:flex text-md font-gilroyMedium flex items-center hover:underline">
+                            Дивитися всі
+                            <span class="ml-1 text-lg">➔</span>
+                        </a>
                      </div>
-        <div class="popular-categories xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto my-10">            
+        <div class="popular-categories xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto my-10">            
             <!-- Category Items -->
-            <div class="grid xl:grid-cols-6 md:grid-cols-3 phone:grid-cols-2 gap-7">
+            <div class="grid xl:grid-cols-6 md:grid-cols-3 xs:grid-cols-2 gap-7">
                 <!-- Category 1 -->
                 <div class="category-item flex flex-col items-center">
-                    <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <div class="category-frame xl:w-[180px] xl:h-[180px] xs:w-[134px] xs:h-[134px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
                         <img src="./images/photos/category1.webp" alt="Category 1" class="object-cover mt-[50px]">
                     </div>
                     <p class="mt-3 text-md font-gilroyBold text-black">Мобільні телефони</p>
                 </div>
                 <!-- Category 2 -->
                 <div class="category-item flex flex-col items-center">
-                    <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <div class="category-frame xl:w-[180px] xl:h-[180px] xs:w-[134px] xs:h-[134px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
                         <img src="./images/photos/category2.webp" alt="Category 2" class="object-cover mt-[20px]">
                     </div>
                     <p class="mt-3 text-md font-gilroyBold text-black">Телевізори</p>
                 </div>
                 <!-- Category 3 -->
                 <div class="category-item flex flex-col items-center">
-                    <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <div class="category-frame xl:w-[180px] xl:h-[180px] xs:w-[134px] xs:h-[134px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
                         <img src="./images/photos/category3.webp" alt="Category 3" class="object-cover mt-[50px]">
                     </div>
                     <p class="mt-3 text-md font-gilroyBold text-black">Геймінг</p>
                 </div>
                 <!-- Category 3 -->
                 <div class="category-item flex flex-col items-center">
-                    <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <div class="category-frame xl:w-[180px] xl:h-[180px] xs:w-[134px] xs:h-[134px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
                         <img src="./images/photos/category4.webp" alt="Category 1" class="object-cover mt-[20px]">
                     </div>
                     <p class="mt-3 text-md font-gilroyBold text-black">Навушники</p>
                 </div>
                 <!-- Category 3 -->
                 <div class="category-item flex flex-col items-center">
-                    <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <div class="category-frame xl:w-[180px] xl:h-[180px] xs:w-[134px] xs:h-[134px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
                         <img src="./images/photos/category5.webp" alt="Category 1" class="object-cover mt-[20px]">
                     </div>
                     <p class="mt-3 text-md font-gilroyBold text-black">Електротранспорт</p>
                 </div>
                 <!-- Category 3 -->
                 <div class="category-item flex flex-col items-center">
-                    <div class="category-frame w-[180px] h-[180px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <div class="category-frame xl:w-[180px] xl:h-[180px] xs:w-[134px] xs:h-[134px] rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
                         <img src="./images/photos/category6.webp" alt="Category 1" class="object-cover mt-[20px]">
                     </div>
                     <p class="mt-3 text-md font-gilroyBold text-black">Пральні машини</p>
                 </div>
             </div>
         </div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] phone:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Новинки</p></div>
-        <div class="xl:max-w-[1280px] md:max-w-[768px] phone:max-w-[320px] mx-auto mt-8">
+        <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-8"><p class="font-gilroyBold text-3xl">Новинки</p></div>
+        <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-8">
             <div class="product-container flex gap-4 overflow-x-auto pb-6">
                 <!-- Product Card -->
                 <div class="product-card w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
                     <div class="inner-content w-[260px] mx-auto">
                         <!-- Promo Stickers -->
                         <div class="promo-stickers flex gap-1 mb-3">
-                            <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Новинка</span>
-                            <span class="sticker bg-gray-100 text-black text-sm font-gilroySemibold px-2 py-1/2 rounded-2xl flex items-center">
-                            <img src="./images/icons/youtube.webp" alt="Catalog Icon" class="w-4 h-4 mr-2">Відео</span>
+                            <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Новинка</span>
+                            <span class="sticker bg-gray-100 text-black text-sm font-gilroySemibold xl:px-2 xs:p-1 py-1/2 rounded-2xl flex items-center">
+                            <img src="./images/icons/youtube.webp" alt="Catalog Icon" class="w-4 h-4 mr-2"><span class="video xl:flex xs:hidden">Відео</span></img>
                         </div>
             
                         <!-- Product Image -->
@@ -884,18 +935,20 @@
                         </div>
             
                         <!-- Prices -->
-                        <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                        <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                             <span class="discount-price text-sm text-white line-through mr-2">45 499 грн</span>
                         </div>
-                        <div class="prices flex items-center justify-start mb-3">
+                        <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
                             <span class="actual-price text-2xl font-gilroyBold text-black">12 899 грн</span>
+                            <span class="discount-comment text-white text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         </div>
-            
+                        <span class="discount-comment xs:flex md:hidden text-white text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         <!-- Buy Button and Actions -->
                         <div class="actions flex justify-between">
                             <div class ="buy-button-place">
                                 <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                                Купити
+                                    <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                    <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                                 </button>
                             </div>
                             <div class ="small-button-place">
@@ -913,7 +966,7 @@
                     <div class="inner-content w-[260px] mx-auto">
                         <!-- Promo Stickers -->
                         <div class="promo-stickers flex gap-1 mb-3">
-                            <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Новинка</span>
+                            <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Новинка</span>
                         </div>
             
                         <!-- Product Image -->
@@ -940,18 +993,20 @@
                         </div>
             
                         <!-- Prices -->
-                        <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                        <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                             <span class="discount-price text-sm text-white line-through mr-2">45 499 грн</span>
                         </div>
-                        <div class="prices flex items-center justify-start mb-3">
+                        <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
                             <span class="actual-price text-2xl font-gilroyBold text-black">1 299 грн</span>
+                            <span class="discount-comment text-white text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         </div>
-            
+                        <span class="discount-comment xs:flex md:hidden text-white text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         <!-- Buy Button and Actions -->
                         <div class="actions flex justify-between">
                             <div class ="buy-button-place">
                                 <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                                Купити
+                                    <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                    <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                                 </button>
                             </div>
                             <div class ="small-button-place">
@@ -969,7 +1024,7 @@
                     <div class="inner-content w-[260px] mx-auto">
                     <!-- Promo Stickers -->
                     <div class="promo-stickers flex gap-1 mb-3">
-                        <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Новинка</span>
+                        <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Новинка</span>
                     </div>
         
                     <!-- Product Image -->
@@ -996,18 +1051,20 @@
                     </div>
         
                     <!-- Prices -->
-                    <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                    <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                         <span class="discount-price text-sm text-white line-through mr-2">45 499 грн</span>
                     </div>
-                    <div class="prices flex items-center justify-start mb-3">
+                    <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
                         <span class="actual-price text-2xl font-gilroyBold text-black">12 499 грн</span>
+                        <span class="discount-comment text-white text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     </div>
-        
+                    <span class="discount-comment xs:flex md:hidden text-white text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     <!-- Buy Button and Actions -->
                     <div class="actions flex justify-between">
                         <div class ="buy-button-place">
                             <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                            Купити
+                                <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                             </button>
                         </div>
                         <div class ="small-button-place">
@@ -1025,7 +1082,7 @@
                     <div class="inner-content w-[260px] mx-auto">
                         <!-- Promo Stickers -->
                         <div class="promo-stickers flex gap-1 mb-3">
-                            <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Новинка</span>
+                            <span class="sticker bg-cucumber text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Новинка</span>
                         </div>
             
                         <!-- Product Image -->
@@ -1063,18 +1120,20 @@
                         </div>
             
                         <!-- Prices -->
-                        <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                        <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                             <span class="discount-price text-sm text-white line-through mr-2">25 699 грн</span>
                         </div>
-                        <div class="prices flex items-center justify-start mb-3">
+                        <div class="prices flex items-center justify-start xl:mb-3 xs:mb-0">
                             <span class="actual-price text-2xl font-gilroyBold text-black">10 890 грн</span>
+                            <span class="discount-comment text-white text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         </div>
-            
+                        <span class="discount-comment xs:flex md:hidden text-white text-xs ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                         <!-- Buy Button and Actions -->
                         <div class="actions flex justify-between">
                             <div class ="buy-button-place">
                                 <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                                Купити
+                                    <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                    <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                                 </button>
                             </div>
                             <div class ="small-button-place">
@@ -1090,9 +1149,10 @@
                 </div>
                 <div class="product-card max-w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
                     <!-- Promo Stickers -->
+                    <div class="inner-content w-[260px] mx-auto">
                     <div class="promo-stickers flex gap-1 mb-3">
-                        <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">-10%</span>
-                        <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                        <span class="sticker bg-red-600 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">-10%</span>
+                        <span class="sticker bg-orange-400 text-white text-sm font-gilroyMedium xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                     </div>
         
                     <!-- Product Image -->
@@ -1137,19 +1197,20 @@
                     </div>
         
                     <!-- Prices -->
-                    <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                    <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                         <span class="discount-price text-sm text-gray-500 line-through mr-2">45 499 грн</span>
                     </div>
                     <div class="prices flex items-center justify-start mb-3">
                         <span class="actual-price text-2xl font-gilroyBold text-red-600">40 499 грн</span>
-                        <span class="text-mint text-xs ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
+                        <span class="discount-comment text-mint text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     </div>
-        
+                    <span class="discount-comment text-mint text-xs md:hidden xs:flex ml-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     <!-- Buy Button and Actions -->
                     <div class="actions flex justify-between">
                         <div class ="buy-button-place">
                             <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                            Купити
+                                <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                             </button>
                         </div>
                         <div class ="small-button-place">
@@ -1161,12 +1222,14 @@
                             </button>
                         </div>
                     </div>
+                    </div>
                 </div>
                 <div class="product-card max-w-[308px] max-h-[556px] bg-white rounded-lg shadow-md flex-shrink-0 p-4">
                     <!-- Promo Stickers -->
+                    <div class="inner-content w-[260px] mx-auto">
                     <div class="promo-stickers flex gap-1 mb-3">
-                        <span class="sticker bg-red-600 text-white text-sm font-gilroySemibold px-2 py-1/2 rounded-2xl">-15%</span>
-                        <span class="sticker bg-orange-400 text-white text-sm font-gilroySemibold px-2 py-1/2 rounded-2xl">Хіт Продажу</span>
+                        <span class="sticker bg-red-600 text-white text-sm font-gilroySemibold xl:px-2 xs:p-1 py-1/2 rounded-2xl">-15%</span>
+                        <span class="sticker bg-orange-400 text-white text-sm font-gilroySemibold xl:px-2 xs:p-1 py-1/2 rounded-2xl">Хіт Продажу</span>
                     </div>
         
                     <!-- Product Image -->
@@ -1211,19 +1274,20 @@
                     </div>
         
                     <!-- Prices -->
-                    <div class="prices flex items-center mb-1/2 font-gilroyRegular">
+                    <div class="prices flex items-center mb-0.5 font-gilroyRegular">
                         <span class="discount-price text-sm text-gray-500 line-through mr-2">45 499 грн</span>
                     </div>
                     <div class="prices flex items-center justify-start mb-3">
                         <span class="actual-price text-2xl font-gilroyBold text-red-600">40 499 грн</span>
-                        <span class="text-mint text-xs ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
+                        <span class="discount-comment text-mint text-xs md:flex xs:hidden ml-3 mt-3 font-gilroySemibold">Знижка 4 000 грн</span>
                     </div>
-        
+                    <span class="discount-comment text-mint text-xs ml-3 md:hidden xs:flex font-gilroySemibold">Знижка 4 000 грн</span>
                     <!-- Buy Button and Actions -->
                     <div class="actions flex justify-between">
                         <div class ="buy-button-place">
                             <button class="buy-btn flex-grow bg-mint text-white text-sm font-gilroyMedium py-2 px-12 rounded-md hover:bg-green-700">
-                            Купити
+                                <span class="buy-txt xl:flex xs:hidden">Купити</span>
+                                <img src="./images/icons/cart-white.png" alt="Cart" class="cart-white xl:hidden xs:flex">
                             </button>
                         </div>
                         <div class ="small-button-place">
@@ -1235,12 +1299,13 @@
                             </button>
                         </div>
                     </div>
+                    </div>
                 </div>
                 </div>
             </div>
         </div>
                             <!-- Blog Header -->
-                            <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto mt-16">
+                            <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto mt-16">
                                 <div class="flex items-center mb-6">
                                     <p class="text-3xl font-gilroyBold text-black">Блог</p>
                                     <a href="#" class="text-mint text-md font-gilroyMedium ml-5 flex items-center hover:underline">
@@ -1249,13 +1314,13 @@
                                     </a>
                                 </div>
                              </div>
-                             <section class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto py-4">                            
+                             <section class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto py-4">                            
                                 <!-- Blog Panels -->
                                 <div class="product-container flex space-x-6 overflow-x-auto scrollbar-hidden pb-6">
                                     <div class="blog-panel bg-white rounded-md w-[300px] shrink-0 overflow-hidden flex flex-col justify-between">
                                         <img src="./images/photos/Blog1.webp" alt="Blog 1" class="w-auto mx-auto mt-4 h-auto object-cover">
                                         <div class="px-4 py-5 flex-grow">
-                                            <div class="font-gilroyMedium category-sticker bg-orange-400 text-white text-md px-2 rounded-full inline-block">
+                                            <div class="font-gilroyMedium category-sticker bg-orange-400 text-white text-md xl:px-2 xs:p-1 rounded-full inline-block">
                                                 Огляд
                                             </div>
                                             <h3 class="font-gilroyBold blog-title mt-3 text-md font-bold text-black leading-tight">
@@ -1273,7 +1338,7 @@
                                     <div class="blog-panel bg-white rounded-md w-[300px] shrink-0 overflow-hidden flex flex-col justify-between">
                                         <img src="./images/photos/Blog2.webp" alt="Blog 1" class="w-[276px] h-[172px] mx-auto mt-4 object-cover rounded-md">
                                         <div class="px-4 py-5 flex-grow">
-                                            <div class="font-gilroyMedium category-sticker bg-cyan-500 text-white text-md px-2 rounded-full inline-block">
+                                            <div class="font-gilroyMedium category-sticker bg-cyan-500 text-white text-md xl:px-2 xs:p-1 rounded-full inline-block">
                                                 Новини
                                             </div>
                                             <h3 class="font-gilroyBold blog-title mt-3 text-md font-bold text-black leading-tight">
@@ -1290,7 +1355,7 @@
                                     <div class="blog-panel bg-white rounded-lg w-[300px] shrink-0 overflow-hidden shadow-md">
                                         <img src="./images/photos/Blog3.webp" alt="Blog 1" class="w-[276px] h-[172px] mx-auto mt-4 object-cover">
                                         <div class="px-4 py-5">
-                                            <div class="font-gilroyMedium category-sticker bg-cyan-500 text-white text-md px-2 rounded-full inline-block">
+                                            <div class="font-gilroyMedium category-sticker bg-cyan-500 text-white text-md xl:px-2 xs:p-1 rounded-full inline-block">
                                                 Новини
                                             </div>
                                             <h3 class="font-gilroyBold blog-title mt-3 text-md font-bold text-black leading-tight">
@@ -1307,7 +1372,7 @@
                                     <div class="blog-panel bg-white rounded-lg w-[300px] shrink-0 overflow-hidden shadow-md">
                                         <img src="./images/photos/Blog4.webp" alt="Blog 1" class="w-[276px] h-[172px] mx-auto mt-4 object-cover">
                                         <div class="px-4 py-5">
-                                            <div class="font-gilroyMedium category-sticker bg-magenta text-white text-md px-2 rounded-full inline-block">
+                                            <div class="font-gilroyMedium category-sticker bg-magenta text-white text-md xl:px-2 xs:p-1 rounded-full inline-block">
                                                 Поради
                                             </div>
                                             <h3 class="font-gilroyBold blog-title mt-3 text-md font-bold text-black leading-tight">
@@ -1324,7 +1389,7 @@
                                     <div class="blog-panel bg-white rounded-lg w-[300px] shrink-0 overflow-hidden shadow-md">
                                         <img src="./images/photos/Blog1.webp" alt="Blog 1" class="w-auto mx-auto mt-4 h-auto object-cover">
                                         <div class="px-4 py-5">
-                                            <div class="font-gilroySemibold category-sticker bg-orange-400 text-white text-md px-2 rounded-full inline-block">
+                                            <div class="font-gilroySemibold category-sticker bg-orange-400 text-white text-md xl:px-2 xs:p-1 rounded-full inline-block">
                                                 Огляд
                                             </div>
                                             <h3 class="font-gilroyBold blog-title mt-3 text-md font-bold text-black leading-tight">
@@ -1342,7 +1407,7 @@
                                     <div class="blog-panel bg-white rounded-lg w-[300px] shrink-0 overflow-hidden shadow-md">
                                         <img src="./images/photos/Blog1.webp" alt="Blog 1" class="w-auto mx-auto mt-4 h-auto object-cover">
                                         <div class="px-4 py-5">
-                                            <div class="font-gilroySemibold category-sticker bg-orange-400 text-white text-md px-2 rounded-full inline-block">
+                                            <div class="font-gilroySemibold category-sticker bg-orange-400 text-white text-md xl:px-2 xs:p-1 rounded-full inline-block">
                                                 Огляд
                                             </div>
                                             <h3 class="font-gilroyBold blog-title mt-3 text-md font-bold text-black leading-tight">
@@ -1359,41 +1424,44 @@
                                 </div>
                             </section>
                             <section class="subscribe-section py-10 px-6 overflow-hidden">
-                                <div class="xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] md:h-[198px] mx-auto flex bg-white rounded-md flex-row items-center gap-10">
-                                    <!-- Left Content -->
-                                    <div class="subscribe-content ml-[80px] w-full lg:w-1/2 text-left">
-                                        <h2 class="xl:text-3xl md:text-xl font-gilroyBold text-black mb-8">
+                                <div class="xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] md:h-[198px] xs:h-[376px] mx-auto flex bg-white rounded-md xl:flex-row md:flex-row xs:flex-col items-center gap-3">
+                                    <div class="subscribe-content w-full lg:w-1/2 text-left xs:text-center xs:flex xs:flex-col xs:items-center xs:mb-6">
+                                        <h2 class="xl:text-3xl md:text-2xl font-gilroyBold text-black mb-8 mt-4 xs:w-[80%]">
                                             Новини, знижки та крутецькі пропозиції
                                         </h2>
-                                        <form class="flex flex-row items-center justify-center">
-                                            <input type="email" placeholder="Ваш email" class="xl:w-[300px] md:w-[213px] py-3 px-3 rounded-l-lg border border-gray-300 text-black font-gilroyMedium focus:ring-2 focus:ring-green-500 focus:outline-none" required>
-                                            <button type="submit" class="bg-mint hover:bg-green-600 xl:w-[180px] md:w-[127px] text-white px-8 py-3 rounded-r-lg font-gilroySemibold text-[18px] text-center">
-                                                Підписатись
+                                        <form class="flex flex-row items-center justify-center xs:w-[80%]">
+                                            <input type="email" placeholder="Ваш email" 
+                                                   class="xl:w-[300px] md:w-[213px] xs:w-[192px] py-3 px-3 rounded-l-lg border border-gray-300 text-black font-gilroyMedium focus:ring-2 focus:ring-green-500 focus:outline-none" 
+                                                   required>
+                                            <button type="submit" 
+                                                    class="bg-mint hover:bg-green-600 xl:w-[180px] md:w-[127px] xs:w-[80px] text-white px-4 py-3 rounded-r-lg font-gilroySemibold text-[16px] text-center">
+                                                <span class="xl:flex md:flex xs:hidden">Підписатись</span>
+                                                <span class="xl:hidden md:hidden xs:flex text-sm">ОК</span>
                                             </button>
                                         </form>
                                     </div>
-                            
+                                    
                                     <!-- Right Image -->
-                                    <div class="subscribe-image w-full lg:w-1/2 relative">
-                                        <div class="aspect-w-1 aspect-h-1">
+                                    <div class="subscribe-image w-full lg:w-1/2 relative xs:flex xs:justify-center">
+                                        <div class="aspect-w-1 aspect-h-1 xs:flex xs:justify-center">
                                             <img src="./images/photos/klipartz 1(full).webp" alt="Subscribe Image" class="xl:hidden w-[90%] h-auto">
-                                            <img src="./images/photos/klipartz 1.webp" alt="Subscribe Image" class="md:hidden xl:flex w-[70%] h-auto">
+                                            <img src="./images/photos/klipartz 1.webp" alt="Subscribe Image" class="md:hidden xs:hidden xl:flex w-[80%] h-auto">
                                         </div>
                                     </div>
                                 </div>
                             </section>
-                            <footer class="bg-white text-black py-10 xl:max-w-[1280px] md:max-w-[768px] [@media(min-width: 320px)]max-w-[320px] mx-auto">
-                                <div class="grid grid-cols-4 gap-8 px-6">
+                            <footer class="bg-white md:flex xs:hidden text-black py-10 xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto">
+                                <div class="foot-pc grid xl:grid-cols-4 md:grid-cols-4 xs:grid-cols-1 gap-8 px-6">
                                     <!-- Logo and Copyright -->
                                     <div>
-                                        <img src="./images/logo.webp" alt="Logo" class="mb-4">
+                                        <img src="./images/logo.webp" alt="Logo" class="shop-logo mb-4">
                                         <p class="xl:text-md md:text-xs leading-tight text-gray-600 font-gilroyRegular">
                                             Всі права захищені
                                             "Магазін" Copyright 2021</p>
                                     </div>
                             
                                     <!-- Catalogue Navigation Links -->
-                                    <div>
+                                    <div class="nav-section-pc">
                                         <h4 class="text-black text-lg font-gilroyBold mb-4">Каталог</h4>
                                         <ul class="space-y-2 mb-4 xl:text-lg md:text-sm">
                                             <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Телефони та планшети</a></li>
@@ -1408,7 +1476,7 @@
                                     </div>
                             
                                     <!-- Informational Links -->
-                                    <div>
+                                    <div class="nav-section-pc">
                                         <h4 class="text-black text-lg font-gilroyBold mb-4">Інформація</h4>
                                         <ul class="space-y-2 font-gilroyMedium xl:text-lg md:text-sm">
                                             <li><a href="#" class="hover:text-green-500">Про компанію</a></li>
@@ -1419,8 +1487,9 @@
                                     </div>
                             
                                     <!-- Contacts -->
-                                    <div>
+                                    <div class="nav-section-pc">
                                         <h4 class="text-black text-lg font-gilroyBold mb-4">Контакти</h4>
+                                        <div class="contact-info">
                                         <div class="py-2">
                                             <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Інформаційна служба:</p>
                                             <a href="0 800 800 00 08" class="hover:text-green-500 xl:text-2xl md:text-md font-gilroyBold text-black">0 800 800 00 08</a>
@@ -1447,10 +1516,80 @@
                                             </a>
                                         </div>
                                         </div>
+                                        </div>
                                     </div>
                                 </div>
                             </footer>
+                            <footer class="bg-white xs:flex md:hidden text-black py-10 xl:max-w-[1280px] md:max-w-[768px] xs:max-w-[320px] mx-auto">
+                                <div class="foot-mobile grid xl:grid-cols-4 md:grid-cols-4 xs:grid-cols-1 gap-8 px-6">
+                                    <!-- Logo and Copyright -->
+                                    <div>
+                                        <img src="./images/logo.webp" alt="Logo" class="shop-logo mb-4">
+                                        <p class="xl:text-md md:text-xs leading-tight text-gray-600 font-gilroyRegular">
+                                            Всі права захищені
+                                            "Магазін" Copyright 2021</p>
+                                    </div>
                             
+                                    <!-- Catalogue Navigation Links -->
+                                    <div class="nav-section">
+                                        <h4 class="text-black text-lg font-gilroyBold mb-4">Каталог</h4>
+                                        <ul class="space-y-2 mb-4 xl:text-lg md:text-sm">
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Телефони та планшети</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Телевізори</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Побутова техніка</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Техніка для кухні</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Геймінг</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Відео та аудіо</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Електротранспорт</a></li>
+                                            <li><a href="#" class="hover:text-green-500 font-gilroyMedium">Акції</a></li>
+                                        </ul>
+                                    </div>
+                            
+                                    <!-- Informational Links -->
+                                    <div class="nav-section">
+                                        <h4 class="text-black text-lg font-gilroyBold mb-4">Інформація</h4>
+                                        <ul class="space-y-2 font-gilroyMedium xl:text-lg md:text-sm">
+                                            <li><a href="#" class="hover:text-green-500">Про компанію</a></li>
+                                            <li><a href="#" class="hover:text-green-500">Доставка</a></li>
+                                            <li><a href="#" class="hover:text-green-500">Блог</a></li>
+                                            <li><a href="#" class="hover:text-green-500">Контакти</a></li>
+                                        </ul>
+                                    </div>
+                            
+                                    <!-- Contacts -->
+                                    <div class="nav-section">
+                                        <h4 class="text-black text-lg font-gilroyBold mb-4">Контакти</h4>
+                                        <div class="contact-info">
+                                        <div class="py-2">
+                                            <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Інформаційна служба:</p>
+                                            <a href="0 800 800 00 08" class="hover:text-green-500 xl:text-2xl md:text-md font-gilroyBold text-black">0 800 800 00 08</a>
+                                        </div>
+                                        <div class="py-2">
+                                            <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Режим роботи:</p>
+                                            <a href="0 800 800 00 08" class="hover:text-green-500 text-md font-gilroyMedium text-black">Пн-Сб: 9:00-20:00</a>
+                                        </div>
+                                        <div class="py-2">
+                                            <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Адреса магазину:</p>
+                                            <a href="0 800 800 00 08" class="hover:text-green-500 text-md leading-tight font-gilroyMedium text-black">Київ, вул. Майдан Незалежності, 1</a>
+                                        </div>
+                                        <div class="py-2">
+                                            <p class="mb-2 text-xs text-gray-600 font-gilroyRegular">Соціальні мережі:</p>
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="hover:bg-gray-300 rounded-full" aria-label="Facebook">
+                                                <img src="./images/icons/bx_bxl-facebook.webp" alt="Favourites" class="w-6 h-6">
+                                            </a>
+                                            <a href="#" class="hover:bg-gray-300 rounded-full" aria-label="Twitter">
+                                                <img src="./images/icons/bx_bxl-twitter.webp" alt="Favourites" class="w-6 h-6">
+                                            </a>
+                                            <a href="#" class="hover:bg-gray-300 rounded-full" aria-label="Instagram">
+                                                <img src="./images/icons/ant-design_instagram-filled.webp" alt="Favourites" class="w-6 h-6">
+                                            </a>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
     </body>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/script-mobile.js"></script>

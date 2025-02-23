@@ -1,7 +1,7 @@
 const slidesContainer = document.querySelector('.slides');
 const dots = document.querySelectorAll('.dot');
-const leftButton = document.querySelector('.left-button');
-const rightButton = document.querySelector('.right-button');
+const leftButton = document.querySelector('.nav-button-left');
+const rightButton = document.querySelector('.nav-button-right');
 
 let currentSlide = 0;
 
