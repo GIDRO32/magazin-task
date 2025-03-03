@@ -12,11 +12,22 @@ function updateSlides(index) {
 }
 
 function updateDots(index) {
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-green-600', i === index);
-        dot.classList.toggle('bg-gray-400', i !== index);
-    });
+    // Show pagination only on PC
+    if (window.innerWidth >= 1024) {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('bg-green-600', i === index);
+            dot.classList.toggle('bg-gray-400', i !== index);
+            dot.style.display = 'block';
+        });
+    } else {
+        dots.forEach(dot => dot.style.display = 'none');
+    }
 }
+
+window.addEventListener('resize', () => {
+    updateDots(currentSlide);
+});
+
 
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {

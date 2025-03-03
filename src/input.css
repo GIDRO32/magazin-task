@@ -479,9 +479,9 @@
     #nav-menu {
         display: none; /* Hide menu on small screens */
     }
-    /* #menu-toggle {
-        display: flex; /* Show menu button on small screens 
-        }*/
+    #menu-toggle {
+        display: flex;
+        }
     #sub-header{
         display: none;
     }
