@@ -8,7 +8,7 @@
     </head>
     <body class = "bg-gray-100">
         <div class="main-header xl:max-w-[1280px] md:max-w-[1279px] xs:max-w-[767px] xl:mx-auto md:mx-2 xs:mx-2">
-        <header class="xl:bg-gray-100 md:bg-white xs:bg-white text-black flex justify-between items-center p-3 gap-5">
+            <header class="xl:bg-gray-100 md:bg-white xs:bg-white text-black flex justify-between items-center p-3 gap-5 relative">
                 <button id="hamburger-button" class="xl:hidden md:flex items-center p-2">
                     <img src="./images/icons/menu.webp" alt="Menu" class="w-8 h-8">
                     <img src="./images/logo.webp" alt="Favourites" class="shop-logo-mobile xl:w-27 md:w-18 xs:w-9 h-auto ml-4">
@@ -30,36 +30,40 @@
                         <button class="bg-none border-none font-gilroyRegular py-1 cursor-pointer text-sm rounded hover:text-mint">EN</button>
                     </div>
                 </div>
-                <!-- Icon Buttons (Right Side) -->
-                <div id="header-mobile" class="flex items-centerspace-x-3 xs:max-w-[767px] md:max-w-[1279px]">
-                    <!-- Search Section -->
-                    <div id="search-container" class="flex items-center relative transition-all duration-300">
-                        <!-- Search Input (Hidden by Default) -->
-                        <!-- Search Button -->
-                        <button id="search-button" class="p-2">
-                            <img src="./images/icons/search.webp" alt="Search" class="w-7 h-7">
-                        </button>
-                    </div>
-
+        
+                <!-- Mobile Header with Search -->
+                <div id="header-mobile" class="relative flex items-center space-x-3 xs:max-w-[767px] md:max-w-[1279px]">
+                    <!-- Search Button -->
+                    <button id="search-button" class="p-2">
+                        <img src="./images/icons/search.webp" alt="Search" class="w-7 h-7">
+                    </button>
+        
+                    <!-- Search Popup (Initially Hidden) -->
+                    <div id="searchPopup" class="hidden fixed left-0 top-0 w-full bg-white shadow-md z-50 px-4 py-3 flex items-center">
+                        <input type="text" placeholder="Пошук..."
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 font-gilroyMedium focus:ring-green-500 focus:outline-none">
+                        <button id="closeSearch" class="ml-2 text-black hover:text-red-500 text-xl">&times;</button>
+                    </div>                    
+        
                     <!-- User Button -->
-                    <button id="user-button" class="p-2">
+                    <button id="user-button" class="px-2">
                         <img src="./images/icons/user.webp" alt="User" class="w-7 h-7">
                     </button>
-
+        
                     <!-- Wishlist Button -->
-                    <button id="wishlist-button" class="relative p-2">
+                    <button id="wishlist-button" class="relative px-2">
                         <img src="./images/icons/wishlist.webp" alt="Wishlist" class="w-7 h-7">
-                        <div id="wishlist-badge" class="absolute -top-1 -right-1 bg-red-500 text-white font-gilroyMedium text-xs rounded-full w-5 h-5 flex items-center justify-center">3</div>
+                        <div id="wishlist-badge" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</div>
                     </button>
-
+        
                     <!-- Cart Button -->
-                    <button id="cart-button" class="relative p-2">
+                    <button id="cart-button" class="relative px-2">
                         <img src="./images/icons/cart.webp" alt="Cart" class="w-7 h-7">
-                        <div id="cart-badge" class="absolute -top-1 -right-1 bg-green-500 text-white font-gilroyMedium text-xs rounded-full w-5 h-5 flex items-center justify-center">2</div>
+                        <div id="cart-badge" class="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</div>
                     </button>
                 </div>
-        </header>
-        </div>
+            </header>
+        </div>        
     <div class="bg-white">
     <div class="xl:max-w-[1280px] md:max-w-[1279px] xs:max-w-[767px] xl:mx-auto md:mx-2 xs:mx-2">
         <div id="sub-header" class="sub-header-class flex items-center justify-between py-3 border-none">

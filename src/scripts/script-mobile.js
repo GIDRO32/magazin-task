@@ -15,48 +15,21 @@ document.addEventListener("click", function (event) {
         menu.classList.remove("open");
     }
 });
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.getElementById("search-button");
-    const header = document.querySelector("header"); // Select entire header
-    let originalHeaderHTML = header.innerHTML; // Store original header content
-    let searchActive = false; // Track search state
+    const searchPopup = document.getElementById("searchPopup");
+    const closeSearch = document.getElementById("closeSearch");
 
-    function openSearch() {
-        // Replace the entire header with the search input and close button
-        header.innerHTML = `
-            <div class="flex items-center w-full bg-white shadow-md p-3">
-                <button id="closeSearch" class="p-2 text-black hover:text-red-500 text-2xl">&times;</button>
-                <input type="text" placeholder="Пошук..." 
-                    class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-2 font-gilroyMedium focus:ring-green-500 focus:outline-none">
-            </div>
-        `;
-        searchActive = true;
+    searchButton.addEventListener("click", () => {
+        searchPopup.classList.remove("hidden");
+        searchPopup.classList.add("flex"); // Show the search input
+    });
 
-        // Add event listener for the close button
-        document.getElementById("closeSearch").addEventListener("click", closeSearch);
-    }
-
-    function closeSearch() {
-        header.innerHTML = originalHeaderHTML; // Restore the original header
-        searchActive = false;
-        restoreSearchFunctionality();
-    }
-
-    function restoreSearchFunctionality() {
-        document.getElementById("search-button").addEventListener("click", openSearch);
-    }
-
-    searchButton.addEventListener("click", openSearch);
-
-    // Close search when screen width exceeds 1279px
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 1279 && searchActive) {
-            closeSearch();
-        }
+    closeSearch.addEventListener("click", () => {
+        searchPopup.classList.add("hidden");
+        searchPopup.classList.remove("flex");
     });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     function enableSwipe(sliderId) {
